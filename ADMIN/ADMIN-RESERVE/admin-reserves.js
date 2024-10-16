@@ -78,33 +78,45 @@ async function fetchReservedItems() {
             <p class="price">${itemData.price}</p>
           </div>
           <button class="view-btn"
-      data-email="${itemData.userEmail}"
-      data-title="${itemData.title}"
-      data-price="${itemData.price}"
-      data-image="${itemData.imageUrl}"
-      data-user="${itemData.addedBy}">
-      Notify User
-    </button>
-    <button class="delete-btn">View</button>
+            data-email="${itemData.userEmail}"
+            data-title="${itemData.title}"
+            data-price="${itemData.price}"
+            data-image="${itemData.imageUrl}"
+            data-user="${itemData.addedBy}">
+            Notify User
+          </button>
+          <button class="delete-btn">View</button>
         `;
 
         // Append the reservation item to the list
         reservationList.appendChild(reservationItem);
 
-        // Attach the event listener to the newly created button
+        // Attach the event listener to the "Notify" button
         const viewButton = reservationItem.querySelector(".view-btn");
         viewButton.addEventListener("click", (event) => {
-          console.log("VIEW button clicked");
+          console.log("Notify button clicked");
           const userEmail = event.target.getAttribute("data-email");
+
           const itemData = {
             addedBy: event.target.getAttribute("data-user"),
             title: event.target.getAttribute("data-title"),
             price: event.target.getAttribute("data-price"),
             imageUrl: event.target.getAttribute("data-image"),
+            userEmail: event.target.getAttribute("data-email"),
+            color: "No available colors", // Hardcoded for now
+            size: "No sizes available", // Hardcoded for now
           };
 
-          // Call the sendEmail function when the "VIEW" button is clicked
+          // Send the email when the "Notify User" button is clicked
           sendEmail(userEmail, itemData);
+          openModal(itemData); // Open the modal with the item details
+        });
+
+        // Attach the event listener to the "View" button
+        const deleteButton = reservationItem.querySelector(".delete-btn");
+        deleteButton.addEventListener("click", () => {
+          console.log("View button clicked");
+          openModal(itemData); // Open modal for the same itemData
         });
       });
     });
@@ -113,6 +125,43 @@ async function fetchReservedItems() {
   }
   console.log("Data fetching complete.");
 }
+
+// Function to open the modal
+function openModal(itemData) {
+  const modal = document.getElementById("itemModal");
+
+  // Populate the modal with item data
+  document.getElementById("modal-title").textContent =
+    itemData.title || "No title available";
+  document.getElementById("modal-addedBy").textContent =
+    itemData.addedBy || "No user information";
+  document.getElementById("modal-email").textContent =
+    itemData.userEmail || "No email provided";
+  document.getElementById("modal-price").textContent =
+    itemData.price || "No price yet";
+  document.getElementById("modal-size").textContent =
+    itemData.size || "No sizes available";
+  document.getElementById("modal-color").textContent =
+    itemData.color || "No available colors";
+  document.getElementById("modal-image").src =
+    itemData.imageUrl || "https://via.placeholder.com/300"; // Fallback image
+
+  // Show the modal
+  modal.style.display = "block";
+}
+
+// Close modal when the user clicks on the "X" (close button)
+document.querySelector(".close").onclick = function () {
+  document.getElementById("itemModal").style.display = "none";
+};
+
+// Close modal when user clicks outside the modal content
+window.onclick = function (event) {
+  const modal = document.getElementById("itemModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 
 // Call the fetchReservedItems function when the page loads
 window.addEventListener("DOMContentLoaded", fetchReservedItems);

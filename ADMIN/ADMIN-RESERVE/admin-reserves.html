@@ -24,5 +24,21 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
     <script type="module" src="admin-reserves.js"></script>
+
+    <!-- Modal Structure -->
+    <div id="itemModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Item Title</h2>
+        <img id="modal-image" src="" alt="Item Image" />
+        <div class="modal-details">
+          <p><strong>Added By:</strong> <span id="modal-addedBy"></span></p>
+          <p><strong>Email:</strong> <span id="modal-email"></span></p>
+          <p><strong>Price:</strong> <span id="modal-price"></span></p>
+          <p><strong>Size:</strong> <span id="modal-size"></span></p>
+          <p><strong>Color:</strong> <span id="modal-color"></span></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
