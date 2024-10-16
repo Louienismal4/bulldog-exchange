@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BULLDOGS Exchange - Create Post</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <img
+        src="/Assets/bulldogs-exchange.png"
+        alt="BULLDOGS Exchange"
+        id="bulfrogo"
+      />
+      <div class="search-bar">
+        <input type="text" placeholder="Search" id="searchBar" />
+      </div>
+      <a
+        href="/Admin-Hp/item-posting/admin-create-post.html"
+        class="add-item-button"
+        >Add Item</a
+      >
+      <a
+        href="/Admin-Hp/admin-reserve-list/admin-reserves.html"
+        class="add-item-button"
+        >Reserved List</a
+      >
+      <div class="category-links">
+        <div class="dropdown">
+          <a href="#">UNIFORM ▼</a>
+          <div class="dropdown-content">
+            <a href="#">School Uniform</a>
+            <a href="#">Sports Uniform</a>
+            <a href="#">Lab Coat</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">MERCH ▼</a>
+          <div class="dropdown-content">
+            <a href="#">T-Shirts</a>
+            <a href="#">Hoodies</a>
+            <a href="#">Caps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">UNIFORM</h2>
+      <div class="white-container out-of-stock">
+        <div class="product-grid"></div>
+        <!-- Product grid for UNIFORM items -->
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">MERCH</h2>
+      <div class="white-container available">
+        <div class="product-grid"></div>
+        <!-- Product grid for MERCH items -->
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">ACCESSORIES</h2>
+      <div class="white-container out-of-stock">
+        <div class="product-grid"></div>
+        <!-- This should be the container for accessories -->
+      </div>
+    </div>
+    <!-- This div was missing a closing tag -->
+
+    <script src="admin.js" type="module"></script>
+
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img id="modalImage" src="" alt="Product Image" />
+        <div class="details">
+          <label for="modalTitle">Title:</label>
+          <input type="text" id="modalTitleInput" placeholder="Enter title" />
+
+          <label for="modalDescription">Description:</label>
+          <textarea
+            id="modalDescriptionInput"
+            placeholder="Enter description"
+          ></textarea>
+
+          <label for="modalPrice">Price:</label>
+          <div class="price-container">
+            <span>₱ </span
+            ><input
+              type="text"
+              id="modalPrice"
+              class="price"
+              placeholder="Enter price"
+            />
+          </div>
+
+          <label for="modalStocks">Available Stocks:</label>
+          <div class="stocks-container">
+            <input
+              type="text"
+              id="modalStocks"
+              class="stocks"
+              placeholder="Enter Available Stocks"
+            />
+          </div>
+
+          <label for="availability">Availability:</label>
+          <select id="modalAvailability">
+            <option value="true">Available</option>
+            <option value="false">Not Available</option>
+          </select>
+
+          <div class="sizes">
+            <label for="size">Size:</label>
+            <select id="size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L" selected>L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </div>
+
+          <button class="update-item">Update Item</button>
+          <button class="delete-item">Delete Item</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BULLDOGS Exchange - Products</title>
+    <link rel="stylesheet" href="Homepage1.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="elemental0.png" alt="BULLDOGS Exchange" />
+      <div class="search-bar">
+        <input type="text" placeholder="Search" id="searchBar" />
+      </div>
+      <div class="icon-box">
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+          />
+        </svg>
+        <span id="item-count">0</span>
+      </div>
+      <div class="profileTab">
+        <img
+          class="profile-pic"
+          src="default-profile.png"
+          alt="Profile Picture"
+        />
+      </div>
+
+      <div class="category-links">
+        <div class="dropdown">
+          <a href="#">UNIFORM ▼</a>
+          <div class="dropdown-content">
+            <a href="#">School Uniform</a>
+            <a href="#">Sports Uniform</a>
+            <a href="#">Lab Coat</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">MERCH ▼</a>
+          <div class="dropdown-content">
+            <a href="#">T-Shirts</a>
+            <a href="#">Hoodies</a>
+            <a href="#">Caps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">UNIFORM</h2>
+      <div class="white-container out-of-stock">
+        <div class="product-grid"></div>
+        <!-- Product grid for UNIFORM items -->
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">MERCH</h2>
+      <div class="white-container available">
+        <div class="product-grid"></div>
+        <!-- Product grid for MERCH items -->
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">ACCESSORIES</h2>
+      <div class="white-container available">
+        <div class="product-grid"></div>
+        <!-- Product grid for MERCH items -->
+      </div>
+    </div>
+
+    <script src="test3.js" type="module"></script>
+    <div class="cartTab">
+      <img class="reserve-item1" src="Group 38.png" alt="Reserve List" />
+      <div class="listCart"></div>
+      <div class="btn">
+        <button class="close">CLOSE</button>
+      </div>
+    </div>
+  </body>
+
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <img id="modalImage" src="" alt="Product Image" />
+      <div class="details">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div class="price">₱690</div>
+        <div class="sizes">
+          <label for="size">Size:</label>
+          <select id="size">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L" selected>L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
+        </div>
+        <div class="colors">
+          <label for="color">Color:</label>
+          <input type="radio" name="color" value="black" checked /> Black
+          <input type="radio" name="color" value="blue" /> Blue
+          <input type="radio" name="color" value="gray" /> Gray
+          <input type="radio" name="color" value="yellow" /> Yellow
+        </div>
+        <button class="add-to-cart">Reserve Item</button>
+      </div>
+    </div>
+  </div>
+</html>

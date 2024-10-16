@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BULLDOGS Exchange - Admin</title>
+    <link rel="stylesheet" href="admin-create-post.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="../../Admin-Hp/Group 25(1).png" alt="BULLDOGS Exchange" />
+      <div class="profile-pic"></div>
+    </div>
+
+    <div class="container">
+      <!-- Create Post Section -->
+
+      <div class="thumbnails">
+        <!-- Thumbnail 1 -->
+        <div class="thumbnail-container" id="thumbnailContainer1">
+          <img id="thumbnailPreview1" />
+          <div class="thumbnail-image">Add Image</div>
+          <input
+            type="file"
+            id="thumbnailInput1"
+            accept="image/*"
+            style="display: none"
+          />
+        </div>
+
+        <!-- Thumbnail 2 -->
+        <div class="thumbnail-container" id="thumbnailContainer2">
+          <img id="thumbnailPreview2" />
+          <div class="thumbnail-image">Add Image</div>
+          <input
+            type="file"
+            id="thumbnailInput2"
+            accept="image/*"
+            style="display: none"
+          />
+        </div>
+
+        <!-- Thumbnail 3 -->
+        <div class="thumbnail-container" id="thumbnailContainer3">
+          <img id="thumbnailPreview3" />
+          <div class="thumbnail-image">Add Image</div>
+          <input
+            type="file"
+            id="thumbnailInput3"
+            accept="image/*"
+            style="display: none"
+          />
+        </div>
+      </div>
+
+      <!-- Large Image Upload -->
+      <div class="Add-image-container" id="addImageContainer">
+        <div>
+          <span class="add-image-placeholder">Click to upload an image</span>
+        </div>
+        <img id="imagePreview" alt="Image Preview" />
+        <input type="file" id="fileInput" accept="image/*" />
+      </div>
+
+      <div class="create-post-container">
+        <h2>Create New Post</h2>
+
+        <!-- Input fields for creating a new post -->
+        <label for="postTitle">Title:</label>
+        <input type="text" id="postTitle" placeholder="Enter title" />
+
+        <label for="postDescription">Description:</label>
+        <textarea
+          id="postDescription"
+          placeholder="Enter description"
+        ></textarea>
+        <div class="Category">
+          <label for="type">Type:</label>
+          <select id="category-types">
+            <option value="Merch" selected>Merch</option>
+            <option value="Uniform">Uniform</option>
+            <option value="Accesories">Accesories</option>
+          </select>
+        </div>
+        <label for="postPrice">Price (₱):</label>
+        <input type="text" id="postPrice" placeholder="Enter price" />
+
+        <label>Select Available Colors:</label>
+        <div class="color-options">
+          <label> <input type="checkbox" name="color" value="red" /> Red</label>
+          <label>
+            <input type="checkbox" name="color" value="blue" /> Blue</label
+          >
+          <label>
+            <input type="checkbox" name="color" value="green" /> Green</label
+          >
+          <label>
+            <input type="checkbox" name="color" value="black" /> Black</label
+          >
+          <label>
+            <input type="checkbox" name="color" value="white" /> White</label
+          >
+        </div>
+
+        <label>Select Available Sizes:</label>
+        <div class="size-options">
+          <label> <input type="checkbox" name="size" value="S" /> S </label>
+          <label> <input type="checkbox" name="size" value="M" /> M </label>
+          <label> <input type="checkbox" name="size" value="L" /> L </label>
+          <label> <input type="checkbox" name="size" value="XL" /> XL </label>
+          <label> <input type="checkbox" name="size" value="XXL" /> XXL </label>
+        </div>
+        <!-- Button to submit the new post -->
+        <button id="submitPostButton">Submit Post</button>
+      </div>
+
+      <script type="module" src="admin-create-post.js"></script>
+    </div>
+  </body>
+</html>
