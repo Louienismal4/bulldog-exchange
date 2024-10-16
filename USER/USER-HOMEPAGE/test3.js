@@ -45,12 +45,12 @@ onAuthStateChanged(auth, (user) => {
       profilePicElement.alt = user.displayName || "User Profile"; // Set an alternative text
     } else {
       console.warn("User does not have a profile picture. Using default.");
-      profilePicElement.src = "default.jpg"; // Fallback profile picture
+      profilePicElement.src = "../../assets/default.jpg"; // Fallback profile picture
       profilePicElement.alt = "Default Profile"; // Fallback alt text
     }
   } else {
     console.error("User is not logged in.");
-    profilePicElement.src = "default-profile.png"; // Default profile picture for logged-out users
+    profilePicElement.src = "../../assets/default.jpg"; // Default profile picture for logged-out users
     profilePicElement.alt = "Default Profile"; // Default alt text
   }
 });
