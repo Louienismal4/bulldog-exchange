@@ -85,6 +85,7 @@ async function fetchReservedItems() {
       data-user="${itemData.addedBy}">
       Notify User
     </button>
+    <button class="delete-btn">View</button>
         `;
 
         // Append the reservation item to the list
