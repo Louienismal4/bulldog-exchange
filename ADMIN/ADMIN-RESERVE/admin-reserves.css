@@ -1,5 +1,6 @@
 body {
-  background: url(backgroundngexchange\ copy.jpg) no-repeat center center fixed;
+  background: url(../../assets/backgroundngexchange.jpg) no-repeat center center
+    fixed;
   font-family: Arial, sans-serif;
   background-size: cover;
   color: white;
@@ -15,10 +16,17 @@ header {
 }
 
 .bulldog-header {
-  justify-content: center;
-  width: 30px;
-  height: 100px;
-  margin: 0 auto;
+  justify-content: flex-start;
+  width: 10px;
+  height: auto;
+  margin: 0;
+}
+
+.bulldog-header img {
+  margin-top: -15px;
+  margin-left: -15px;
+  width: 300px;
+  height: auto;
 }
 
 .reservation-container {

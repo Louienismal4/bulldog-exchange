@@ -23,7 +23,7 @@ body {
 }
 
 .navbar img {
-  max-height: 500px;
+  max-height: 150px;
   margin-right: auto; /* Pushes the image to the left */
 }
 
@@ -43,7 +43,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url("../../Admin-Hp/googaga.png") no-repeat center center fixed;
+  background: url("../../assets/googaga.png") no-repeat center center fixed;
   background-size: cover;
   color: black;
   padding-bottom: 100px;
@@ -61,8 +61,8 @@ body {
   display: flex;
 }
 .add-image-placeholder {
-  width: 560px;
-  height: 760px;
+  width: 420px;
+  height: 610px;
   border: 2px dashed #ccc;
   display: flex;
   justify-content: center;
@@ -119,8 +119,8 @@ body {
   border-radius: 10px;
   position: relative;
   margin: 20px auto;
-  height: 800px;
-  width: 600px;
+  height: 650px;
+  width: 460px;
   background-color: #f9f9f9;
   padding: 20px;
   cursor: pointer;
@@ -137,6 +137,7 @@ body {
 #fileInput {
   display: none;
 }
+
 /* Create Post Section styling */
 .create-post-container {
   border-radius: 10px;
