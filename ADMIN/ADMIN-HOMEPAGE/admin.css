@@ -6,6 +6,8 @@
 
 html,
 body {
+  -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer and Edge */
+  scrollbar-width: none;
   height: 100%; /* Ensures that the body and HTML elements take up the full height of the viewport */
   overflow-x: hidden; /* Prevents horizontal scrolling */
   scroll-behavior: smooth; /* Adds smooth scrolling */
@@ -37,7 +39,12 @@ body::-webkit-scrollbar {
   background-color: transparent;
   position: relative;
 }
-
+.nav-btn {
+  margin-top: -45px;
+  margin-left: 900px;
+  display: flex;
+  flex-direction: row-reverse;
+}
 .navbar img {
   position: relative;
   margin-right: auto;
@@ -210,20 +217,34 @@ body::-webkit-scrollbar {
   color: white;
 }
 .add-item-button {
-  margin-left: auto;
+  width: 120px;
+  font-size: 15px;
+  margin-left: 10px;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: #ffd416;
+  color: #35408f;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 60px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.reserves-button {
+  margin-left: 400px;
+  padding: 10px 20px;
+  background-color: #ffd416;
+  color: #35408f;
+  text-decoration: none;
+  border-radius: 60px;
   transition: background-color 0.3s;
   cursor: pointer;
 }
 
 .add-item-button:hover {
-  background-color: #0056b3;
+  background-color: #a98c09;
 }
-
+.reserves-button:hover {
+  background-color: #a98c09;
+}
 @media (max-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
