@@ -1,62 +1,61 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      />
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Login/Register</title>
-      <link rel="stylesheet" href="/LoginForm/LOGIN_FORM.css" />
-      <link rel="stylesheet" href="/Component/toast.css" />
-    </head>
-    <body>
-      <div class="bulldogs-logo"></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="../LOGIN/LOGIN_FORM.css" />
+    <link rel="stylesheet" href="../LOGIN/toast.css" />
+  </head>
+  <body>
+    <div class="bulldogs-logo"></div>
 
+    <div class="paw-print paw-print-top-left"></div>
+    <div class="paw-print paw-print-bottom-right"></div>
 
-      <div class="paw-print paw-print-top-left"></div>
-      <div class="paw-print paw-print-bottom-right"></div>
+    <!-- Container for both login and registration -->
+    <div class="auth-container">
+      <div class="form-slider">
+        <!-- Login Form -->
+        <div class="login-container">
+          <div class="paw-print paw-print-top-left"></div>
+          <div class="paw-print paw-print-bottom-right"></div>
+          <div class="login-title">
+            <span class="login">LOGIN</span>
+            <a class="disc">Login with Microsoft Account</a>
 
-      <!-- Container for both login and registration -->
-      <div class="auth-container">
-        <div class="form-slider">
-          <!-- Login Form -->
-          <div class="login-container">
-            <div class="paw-print paw-print-top-left"></div>
-            <div class="paw-print paw-print-bottom-right"></div>
-            <div class="login-title">
-              <span class="login">LOGIN</span>
-              <a class="disc">Login with Microsoft Account</a>
-
-              <!-- Microsoft logo -->
-              <div class="logo-container">
-                <br />
-                <br />
-                <img
-                  src="/Assets/microsoft.png"
-                  alt="Microsoft logo"
-                  class="microsoft-logo"
-                />
-              </div>
-            </div>
-            <div class="register-link">
-              <p>
-                Don't have an account?
-                <a id="microsoftRegisterButton" href="#">Register</a>
-              </p>
+            <!-- Microsoft logo -->
+            <div class="logo-container">
+              <br />
+              <br />
+              <img
+                src="../assets/microsoft.png"
+                alt="Microsoft logo"
+                class="microsoft-logo"
+              />
             </div>
           </div>
-
-          <!-- Register Form -->
+          <div class="register-link">
+            <p>
+              Don't have an account?
+              <a id="microsoftRegisterButton" href="#">Register</a>
+            </p>
+          </div>
         </div>
-      </div>
-       <div id="toast" class="toast"></div>
-      <!-- footer -->
-      <div class="bottom-design bottom-design-bottom"></div>
-      <div class="bullfrog bullfrog-bottom-left"></div>
 
-      <!-- Firebase SDK and custom scripts -->
-      <script type="module" src="LOGIN_FORM.js"></script>
-    </body>
-  </html>
+        <!-- Register Form -->
+      </div>
+    </div>
+    <div id="toast" class="toast"></div>
+    <!-- footer -->
+    <div class="bottom-design bottom-design-bottom"></div>
+    <div class="bullfrog bullfrog-bottom-left"></div>
+
+    <!-- Firebase SDK and custom scripts -->
+    <script type="module" src="LOGIN_FORM.js"></script>
+  </body>
+</html>

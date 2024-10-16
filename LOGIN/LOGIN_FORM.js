@@ -83,10 +83,10 @@ function signInWithMicrosoft() {
 
           if (userData.areyouadmin) {
             console.log("Redirecting to admin page...");
-            window.location.href = "./Admin-Hp/admin.html";
+            window.location.href = "../ADMIN/ADMIN-HOMEPAGE/admin.html";
           } else {
             console.log("Redirecting to homepage...");
-            window.location.href = "/LoginForm/Homepage1/test3.html";
+            window.location.href = "../USER/USER-HOMEPAGE/test3.html";
           }
         } else {
           console.warn("No user is signed in.");
